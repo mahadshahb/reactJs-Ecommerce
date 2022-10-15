@@ -9,10 +9,11 @@ import { Container } from "./styles/Container";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import MyImage from "./component/MyImage";
-import {useProductContext} from "./context/productcontext";
+import { useProductContext } from "./context/productcontext";
 import PageNavigation from "./component/PageNavigation";
 import FormatPrice from "./helpers/FormatPrice";
 import styled from "styled-components";
+import Star from "./component/Star";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -56,6 +57,7 @@ const SingleProduct = () => {
           {/* product dAta  */}
           <div className="product-data">
             <h2>{name}</h2>
+            <Star stars={stars} reviews={reviews} />
             <p>{stars}</p>
             <p>{reviews} reviews</p>
             <p className="product-data-price">
@@ -99,7 +101,7 @@ const SingleProduct = () => {
                 ID : <span> {id} </span>
               </p>
               <p>
-                Brand :<span> {company} </span>
+                Brand :<span> {company} </span>q
               </p>
             </div>
           </div>
