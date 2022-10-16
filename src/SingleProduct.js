@@ -14,6 +14,7 @@ import PageNavigation from "./component/PageNavigation";
 import FormatPrice from "./helpers/FormatPrice";
 import styled from "styled-components";
 import Star from "./component/Star";
+import AddtoCart from "./component/AddtoCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -104,6 +105,10 @@ const SingleProduct = () => {
                 Brand :<span> {company} </span>q
               </p>
             </div>
+            <hr/>
+            {
+              stock > 0 && <AddtoCart product={singelProduct}/>
+            }
           </div>
         </div>
       </Container>
